@@ -35,11 +35,10 @@ class CocktailShakerSort:
                     sorted = False
 
             # If nothing moved, the array is sorted
-            if not sorted:
+            if sorted:
                 break
 
-            # Reset the sorted flag and move the end point
-            sorted = False
+            # Decrease end index for the next pass
             end -= 1
 
             # Backward pass
@@ -48,7 +47,7 @@ class CocktailShakerSort:
                     arr[i], arr[i - 1] = arr[i - 1], arr[i]
                     sorted = False
             
-            # Move the starting point forward for the next pass
+            # Increase start index for the next pass
             start += 1
 
         return arr
@@ -58,9 +57,9 @@ if __name__ == '__main__':
     """
     Example usage
     """
-    array = [10, 4, 6, 4, 8, -13, 2, 3]
+    array = [11, 4, 6, 4, 8, -13, 2, 3]
     sorter = CocktailShakerSort()
     sorted_array = sorter.sort(array)
     # Prints:
-    # [-13, 2, 3, 4, 4, 6, 8, 10]
+    # [-13, 2, 3, 4, 4, 6, 8, 11]
     print(sorted_array)
