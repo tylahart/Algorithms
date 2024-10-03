@@ -55,9 +55,9 @@ if __name__ == '__main__':
     """
     Example usage
     """
-    array = [10, 4, 6, 4, 8, -13, 2, 3]
+    array = [-10, 4, 6, 4, 8, -13, 2, 3]
     sorter = BitonicSort()
     sorted_array = sorter.sort(array)
     # Prints:
-    # [-13, 2, 3, 4, 4, 6, 8, 10]
+    # [-13, -10, 2, 3, 4, 4, 6, 8]
     print(sorted_array[:len(array)])  # Print only original length
